@@ -1,0 +1,21 @@
+{
+  "Soit": {
+      "values": [
+          "l'écran HP"
+      ]
+  },
+  "Et": {
+      "values": [
+        "j'attends <int> secondes",
+        "je prends un screenshot"
+      ]
+  },
+  "Alors": {
+      "values": [
+        "je tap sur la tuile \"<string>\"",
+        "j'arrive sur une LR avec le mnémonique \"<string>\"",
+        "je tap sur le bouton \"<string>\"",
+        "je tap l'écran aux coordoonées \"<float>\",\"<float>\""
+      ]
+  }
+}
