@@ -5,7 +5,7 @@ propertyNameWithColonPattern = /^\s*(\S+)\s*:/
 propertyNamePrefixPattern = /[a-zA-Z]+[-a-zA-Z]*$/
 
 module.exports =
-  selector: '.source.feature'
+  selector: '.text.gherkin.feature*'
   inclusionPriority: 1
   excludeLowerPriority: true
 
@@ -20,9 +20,10 @@ module.exports =
     else
       []
 
-  loadProperties: ->
+  loadStepsDescriptionJSON: (stepsDescriptionJSONLocalPath) ->
     @properties = {}
-    fs.readFile path.resolve(__dirname, '..', 'autocomplete.json'), (error, content) =>
+    # fs.readFile path.resolve(__dirname, '..', 'autocomplete.json'), (error, content) =>
+    fs.readFile path.resolve(stepsDescriptionJSONLocalPath), (error, content) =>
       @properties = JSON.parse(content) unless error?
       return
 

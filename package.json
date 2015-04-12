@@ -1,6 +1,6 @@
 {
   "name": "autocomplete-gherkin",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Gherkin autocompletions",
   "main": "./lib/main",
   "license": "MIT",
@@ -19,6 +19,6 @@
     "request": "^2.53.0"
   },
   "dependencies": {
-   "language-gherkin": "1.0.1"
+   "language-gherkin": "~>1.1"
   }
 }
