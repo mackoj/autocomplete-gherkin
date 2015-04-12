@@ -4,7 +4,10 @@
   "description": "Gherkin autocompletions",
   "main": "./lib/main",
   "license": "MIT",
-  "repository": "https://github.com/mackoj/autocomplete-gherkin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mackoj/autocomplete-gherkin"
+  },
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
   },
@@ -19,6 +22,10 @@
     "request": "^2.53.0"
   },
   "dependencies": {
-   "language-gherkin": "~>1.1"
+    "cson": "^3.0.1",
+    "language-gherkin": "~>1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/mackoj/autocomplete-gherkin/issues"
   }
 }

@@ -1,5 +1,6 @@
-fs = require 'fs'
 path = require 'path'
+fs = require 'fs'
+request = require 'request'
 
 provider = require './provider'
 
@@ -25,10 +26,27 @@ findConfigurationFile: (featureFolder) ->
       console.log(featureFolder)
       console.log("---")
 
-loadConfigurationFile: (configurationFile) ->
+downloadConfigurationFile: (configurationFile) ->
         console.log("loadConfigurationFile")
         console.log(configurationFile)
         console.log("---")
+
+        requestOptions =
+          url: configurationFile
+          json: true
+
+        request requestOptions, (error, response, properties) ->
+          if error?
+            console.error(error.message)
+            return process.exit(1)
+
+          if response.statusCode isnt 200
+            console.error("Request for configurationFile failed: #{response.statusCode}")
+            return process.exit(1)
+
+# sauvegarder dans le /tmp/atom/nomduplugin/hash.json
+          fs.writeFileSync(path.join(__dirname, 'autocomplete.json'), "#{JSON.stringify(properties, null, 0)}\n")
+
 
 getStepsDescriptionJSONLocalPath: ->
         console.log("getStepsDescriptionJSONLocalPath")
