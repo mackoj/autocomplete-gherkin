@@ -6,7 +6,7 @@ This is made possible by **autocomplete-plus** through its [Provider Api](https:
 
 A source of steps definition is necessary in order to make all of this work.
 
-You have make it by executing this command `cucumber -f json` in the folder that contain the features folder and it will generate a **json** file that contain the required tokens.
+<!-- You have make it by executing this command `cucumber -f json` in the folder that contain the features folder and it will generate a **json** file that contain the required tokens. -->
 
 This is designed this way in order to provide flexibility to the team that write most test and the one that develop.
 
