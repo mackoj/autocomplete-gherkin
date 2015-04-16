@@ -10,25 +10,21 @@
 			"encoding" : "UTF-8",
 			"steps" : [
 				{
-					"line" : 10,
 					"keyword" : "given",
 					"localized_keyword" : "Given ",
 					"localized_text" : "I'm on the screen HP"
 				},
 				{
-					"line" : 11,
 					"keyword" : "given",
 					"localized_keyword" : "Given ",
 					"localized_text" : "I'm on the screen LR"
 				},
 				{
-					"line" : 12,
 					"keyword" : "given",
 					"localized_keyword" : "Given ",
 					"localized_text" : "I'm on the screen FD"
 				},
 				{
-					"line" : 13,
 					"keyword" : "and",
 					"localized_keyword" : "And ",
 					"localized_text" : "I'm on the screen $screen_name",
@@ -41,7 +37,6 @@
 					}
 				},
 				{
-					"line" : 14,
 					"keyword" : "and",
 					"localized_keyword" : "And ",
 					"localized_text" : "I'm on the screen $screen_name1 or $screen_name2",

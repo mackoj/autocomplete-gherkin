@@ -47,10 +47,17 @@ module.exports =
     scopes.indexOf('keyword.gherkin') isnt -1
 
   isPropertyValuePrefix: (prefix) ->
+    console.log("isPropertyValuePrefix")
+    console.log(prefix)
+    console.log("---")
     prefix = prefix.trim()
     prefix.length > 0 and prefix isnt ':'
 
   getPreviousPropertyName: (bufferPosition, editor) ->
+    console.log("getPreviousPropertyName")
+    console.log(bufferPosition)
+    console.log(editor)
+    console.log("---")
     {row} = bufferPosition
     while row >= 0
       line = editor.lineTextForBufferRow(row)
@@ -60,6 +67,11 @@ module.exports =
     return
 
   getPropertyValueCompletions: ({bufferPosition, editor, prefix}) ->
+    console.log("getPropertyValueCompletions")
+    console.log(bufferPosition)
+    console.log(editor)
+    console.log(prefix)
+    console.log("---")
     property = @getPreviousPropertyName(bufferPosition, editor)
     values = @properties[property]?.values
     return [] unless values?
@@ -75,10 +87,18 @@ module.exports =
     completions
 
   getPropertyNamePrefix: (bufferPosition, editor) ->
+    console.log("getPropertyNamePrefix")
+    console.log(bufferPosition)
+    console.log(editor)
+    console.log("---")
     line = editor.getTextInRange([[bufferPosition.row, 0], bufferPosition])
     propertyNamePrefixPattern.exec(line)?[0]
 
   getPropertyNameSuffix: (bufferPosition, editor) ->
+    console.log("getPropertyNameSuffix")
+    console.log(bufferPosition)
+    console.log(editor)
+    console.log("---")
     line = editor.lineTextForBufferRow(bufferPosition.row)
     colonIndex = line.indexOf(':')
     if colonIndex >= bufferPosition.column
@@ -87,6 +107,10 @@ module.exports =
       ': '
 
   getPropertyNameCompletions: ({bufferPosition, editor}) ->
+    console.log("getPropertyNameCompletions")
+    console.log(bufferPosition)
+    console.log(editor)
+    console.log("---")
     suffix = @getPropertyNameSuffix(bufferPosition, editor)
     prefix = @getPropertyNamePrefix(bufferPosition, editor)
     completions = []
