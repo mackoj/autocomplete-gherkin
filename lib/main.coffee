@@ -8,6 +8,8 @@ module.exports =
   activate: -> provider.loadStepsDescriptionJSON(getStepsDescriptionJSONLocalPath())
   getProvider: -> provider
 
+# Tout le télechargement et chargement de la conf d'autocomplete ce fait ici
+
 getDirectories = (srcpath) ->
   fs.readdirSync(srcpath).filter (file) ->
     fs.statSync(path.join(srcpath, file)).isDirectory()

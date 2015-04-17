@@ -1,5 +1,9 @@
 {
-	"version" : "cucumber 2.0.0",
+	"tools" :
+	{
+		"cucumber" : "2.0.0",
+		"gherkin" : "2.0.0"
+	},
 	"steps" : [
 		{
 			"filename" : "./features/step_definitions/toto_steps.rb",

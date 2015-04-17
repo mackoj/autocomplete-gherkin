@@ -1,6 +1,8 @@
 fs = require 'fs'
 path = require 'path'
 
+# l'autocomplete itself ce fera ici
+
 propertyNameWithColonPattern = /^\s*(\S+)\s*:/
 propertyNamePrefixPattern = /[a-zA-Z]+[-a-zA-Z]*$/
 
@@ -22,7 +24,7 @@ module.exports =
 
   loadStepsDescriptionJSON: (stepsDescriptionJSONLocalPath) ->
     @properties = {}
-    # fs.readFile path.resolve(__dirname, '..', 'autocomplete.json'), (error, content) =>
+    # used to be -> fs.readFile path.resolve(__dirname, '..', 'autocomplete.json'), (error, content) =>
     fs.readFile path.resolve(stepsDescriptionJSONLocalPath), (error, content) =>
       @properties = JSON.parse(content) unless error?
       return
