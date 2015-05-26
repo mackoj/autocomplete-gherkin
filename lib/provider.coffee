@@ -2,7 +2,8 @@ fs = require 'fs'
 path = require 'path'
 
 # l'autocomplete itself ce fera ici
-
+# comparer avec le fonctionnement du package https://github.com/atom/autocomplete-css
+ 
 propertyNameWithColonPattern = /^\s*(\S+)\s*:/
 propertyNamePrefixPattern = /[a-zA-Z]+[-a-zA-Z]*$/
 
@@ -24,7 +25,6 @@ module.exports =
 
   loadStepsDescriptionJSON: (stepsDescriptionJSONLocalPath) ->
     @properties = {}
-    # used to be -> fs.readFile path.resolve(__dirname, '..', 'autocomplete.json'), (error, content) =>
     fs.readFile path.resolve(stepsDescriptionJSONLocalPath), (error, content) =>
       @properties = JSON.parse(content) unless error?
       return

@@ -4,12 +4,19 @@
 		"cucumber" : "2.0.0",
 		"gherkin" : "2.0.0"
 	},
+	"tags" : [
+		"toto",
+		"tata",
+		"titi",
+		"tete",
+		"t0t0"
+	],
 	"steps" : [
 		{
 			"filename" : "./features/step_definitions/toto_steps.rb",
 			"language" : {
-				"name" : "English",
-				"native" : "English"
+			"name" : "English",
+			"native" : "English"
 			},
 			"encoding" : "UTF-8",
 			"steps" : [
@@ -31,31 +38,12 @@
 				{
 					"keyword" : "and",
 					"localized_keyword" : "And ",
-					"localized_text" : "I'm on the screen $screen_name",
-					"variables" : {
-						"screen_name" : [
-							"HP",
-							"LR",
-							"FD"
-						]
-					}
+					"localized_text" : "I'm on the screen REGEX CRAP"
 				},
 				{
 					"keyword" : "and",
 					"localized_keyword" : "And ",
-					"localized_text" : "I'm on the screen $screen_name1 or $screen_name2",
-					"variables" : {
-						"screen_name1" : [
-							"HP",
-							"LR",
-							"FD"
-						],
-						"screen_name2" : [
-							"Account",
-							"Facebook",
-							"LRMap"
-						]
-					}
+					"localized_text" : "I'm on the screen \"$screen_name1\" or \"$screen_name2\""
 				}
 			]
 		}

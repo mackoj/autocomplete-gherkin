@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "cson": "^3.0.1",
-    "language-gherkin": "~>1.1"
+    "language-gherkin": ">=1.1 <2.0.0"
   },
   "bugs": {
     "url": "https://github.com/mackoj/autocomplete-gherkin/issues"
